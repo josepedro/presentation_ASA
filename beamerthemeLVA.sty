@@ -1,0 +1,133 @@
+\usetheme{Rochester}
+% \usetheme{Madrid}
+
+
+% fg = foreground color
+% bg = background color
+
+\RequirePackage{pgf}
+
+    \pgfdeclareimage[width=1.0\paperwidth]{Cabecalho_LVA}{Cabecalho_LVA.pdf}
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamercovered{transparent}
+
+\beamer@headheight=0.128\paperwidth
+%\beamer@headheight=7mm
+
+\definecolor{airorange}{rgb}{.953 ,.502 ,.04}
+\definecolor{airdarkblue}{HTML}{064F6F}
+\definecolor{airlightblue}{HTML}{0099d5}
+\definecolor{airgray}{HTML}{686868}
+\definecolor{airlightgray}{HTML}{eeeeee}
+\definecolor{airblue}{rgb}{.13 ,.43 ,.68}
+\definecolor{darkblue}{RGB}{25,50,100}  
+\definecolor{lvablue}{RGB}{10,95,160}% Cores do LVA
+\definecolor{lightblue}{RGB}{30,50,50}                                          % Cores do LVA
+
+\setbeamercolor*{Title bar}{fg=darkblue}
+
+\setbeamercolor*{frametitle}{parent=Title bar}
+% \setbeamercolor*{block title}{bg=airlightblue,fg=white}
+
+\setbeamercolor{palette tertiary}{use=structure,fg=white,bg=darkblue}
+\setbeamercolor{palette secondary}{use=structure,fg=darkblue}
+\setbeamercolor{palette primary}{use=structure,fg=white,bg=darkblue}
+\setbeamercolor{title}{fg=white,bg=lvablue}                                % cor da caixa do titulo na capa
+\setbeamercolor{headline}{fg=white}                                % cor do frametitle
+\setbeamercolor{frametitle}{fg=white}                                % cor do frametitle
+%\setbeamercolor*{block title}{bg=MidnightBlue,fg=white}                         % Cor do título do bloco
+\setbeamercolor*{Location bar}{fg=darkblue,bg=airlightgray}                     % Rodapé
+\setbeamercolor*{block body}{bg=airlightgray,fg=darkblue}
+\setbeamercolor*{normal text}{bg=white,fg=darkblue}
+\setbeamercolor*{section in head/foot}{bg=gray,fg=white}
+\setbeamercolor*{Location bar}{bg=white}
+
+
+\usecolortheme[named=darkblue]{structure}
+
+\setbeamerfont{section in head/foot}{size=\tiny,series=\normalfont}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+
+
+%% CABEÇALHO
+\setbeamertemplate{headline}
+{
+  \pgfuseimage{Cabecalho_LVA}
+  \vskip -1.25cm
+  \linethickness{0.0pt}
+  \framelatex{
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.3\beamer@headheight]{headline}
+    \usebeamerfont{section in head/foot}%
+    %  \insertdocnavigationsymbol
+    % \vskip-2.5cm
+    \insertsectionnavigationhorizontal{0pt}{\hskip0.75cm}{}%
+    % \insertnavigation{0pt}{\hskip5cm}{}
+  \end{beamercolorbox}
+    }
+%   \framelatex{
+%   \begin{beamercolorbox}[wd=\paperwidth,ht=0.7\beamer@headheight]{Title bar}
+%   \end{beamercolorbox}}
+}
+
+%% TÍTULO
+\setbeamertemplate{frametitle}
+{
+    % \nointerlineskip  
+    \vskip-\baselineskip
+      \vskip0.3\beamer@headheight
+    \usebeamerfont*{frametitle}\insertframetitle
+    \vskip-0.05\beamer@headheight
+%     \vskip-5mm
+%   \begin{beamercolorbox}[wd=\paperwidth,ht=0.1cm]{frametitle}\end{beamercolorbox}
+
+%   \vskip-0.10em
+%   \hskip0.7cm\usebeamerfont*{framesubtitle}\insertframesubtitle
+}
+
+
+
+
+
+
+
+%% RODAPÉ 
+\setbeamertemplate{footline}
+{
+  \linethickness{0.25pt}
+  \framelatex{
+  \begin{beamercolorbox}[leftskip = 0.3cm, wd=\paperwidth, ht = 0.4cm, sep = 0.1cm]{Location bar}
+    \usebeamerfont{section in head/foot}%
+    \hspace{-1mm}\vspace{-.5mm}\hspace{5mm}\insertshortauthor~|~\insertshorttitle
+    \hfill
+    \insertframenumber/\inserttotalframenumber
+    \hspace{2mm}
+  \end{beamercolorbox}}
+}
+
+
+
+
+% \setbeamertemplate{title page}
+% {
+% %   \AddToShipoutPictureFG*{\includegraphics[width=\paperwidth,height=\paperheight]{img/bg-first.pdf}}
+%   \begin{center}
+%     \usebeamerfont{title}\inserttitle
+%     \ifx\insertsubtitle\@empty
+%     \else
+%       \vskip2ex
+%       \usebeamerfont{subtitle}\insertsubtitle
+%     \fi
+%     \ifx\insertauthor\@empty
+%     \else
+%       \vskip2ex
+%       \usebeamerfont{author}\insertauthor
+%     \fi
+%     \ifx\insertdate\@empty
+%     \else
+%       \vskip2ex
+%       \usebeamerfont{date}\insertdate%
+%     \fi
+%   \end{center}
+%   \vfill
+% }
