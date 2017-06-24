@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+  \begin{axis}[
+	width=\scalex \textwidth,
+  height=\scaley \textwidth,
+	xmin=0,
+  xmax=2.5,
+    ymin=0,
+    ymax=1,
+    ytick distance=0.2,
+    xtick distance=0.5,
+    grid=major, % Display a grid	
+ 	%grid style={dashed,gray!90}, % Set the style
+	xlabel = \small{$ka$},
+	ylabel = \small{$|R_{\textbf{C}}|$},
+  ]
+ \addplot[color=black, thick] table[x index=0,y index=1] {dados/coeficiente_reflexao_anecoica/C_abs.txt};
+   
+  \end{axis}
+  \end{tikzpicture}
+  \caption[Coeficiente de Reflexão $R_{\textbf{C}}$]{}
+  \label{fig:C_reflexao}
+  %\caption[Coeficiente de Reflexão $R_{\textbf{C}}$]{Resultado da magnitude do coeficiente de reflexão calculado no ponto $\textbf{C}$, próximo da condição anecóica localizada nas fronteiras do modelo numérico.}

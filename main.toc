@@ -1,8 +1,7 @@
 \beamer@endinputifotherversion {3.36pt}
 \select@language {english}
 \beamer@sectionintoc {2}{Introduction}{2}{0}{1}
-\beamer@sectionintoc {3}{Implantable Sensors}{4}{0}{2}
-\beamer@sectionintoc {4}{Design}{11}{0}{3}
-\beamer@sectionintoc {5}{Lumped parameter models}{13}{0}{4}
-\beamer@sectionintoc {6}{Results}{16}{0}{5}
-\beamer@sectionintoc {7}{Conclusions and ongoing work}{20}{0}{6}
+\beamer@sectionintoc {3}{Background}{5}{0}{2}
+\beamer@sectionintoc {4}{Lattice Boltzmann Method}{8}{0}{3}
+\beamer@sectionintoc {5}{Results}{12}{0}{4}
+\beamer@sectionintoc {6}{Conclusions}{20}{0}{5}

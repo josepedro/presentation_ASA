@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+  \begin{axis}[
+  width=.9 \textwidth,
+  height=.7 \textwidth,
+  xmin=0,
+  xmax=1.8,
+    ymin=0.4,
+    ymax=1.2,
+    ytick distance=0.1,
+    grid=major, % Display a grid  
+  %grid style={dashed,gray!90}, % Set the style
+  xlabel = \small{$ka$},
+  ylabel = \small{$|R_{r}|$},
+  ]
+ \addplot[color=black, thick] table[x index=0,y index=1] {dados/outros_dados/abs_r_LS.txt};
+ \addplot[color=black, dashed] table[x index=0,y index=1] {dados/outros_dados/abs_r_munt.txt};
+   
+  \end{axis}
+  \end{tikzpicture}
+  \caption[Magnitudes do coeficiente de reflexão $|R_{r}|$]{Resultados analíticos exatos para magnitude do coeficiente de reflexão $|R_{r}|$ ao final de um duto não flangeado. A linha contínua apresenta o resultado sem escoamento de \citeonline{levine1948radiation} e a linha tracejada apresenta o resultado com escoamento de Mach = 0,15 de \citeonline{munt1990acoustic}.}
+  \label{fig:comp1}

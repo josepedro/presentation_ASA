@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+  \begin{axis}[
+  width=\scalex \textwidth,
+  height=\scaley \textwidth,
+  xmin=0,
+  xmax=1.8,
+    ymin=0.4,
+    ymax=1.2,
+    ytick distance=0.1,
+    grid=major, % Display a grid  
+  %grid style={dashed,gray!90}, % Set the style
+  xlabel = \small{$ka$},
+  ylabel = \small{$|R_{r}|$},
+  ]
+ \addplot[color=black, thick] table[x index=0,y index=1] {dados/duto_exaustao/abs_r_007_analytical.txt};
+ \addplot[color=black, mark=o, only marks] table[x index=0,y index=1] {dados/duto_exaustao/abs_r_007_simulation.txt};
+   
+  \end{axis}
+  \end{tikzpicture}
+  %\caption[Coeficiente de Reflexão $|R_{r}|$ com Escoamento de Exaustão (M $=$ 0,07)]{}
+  \label{fig:abs_r_exaustao_007}

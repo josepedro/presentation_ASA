@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+  \begin{axis}[
+   width=\scalex \textwidth,
+  height=\scaley \textwidth,
+  xmin=0,
+  xmax=1.8,
+    ymin=0.15,
+    ymax=0.6,
+    ytick distance=0.05,
+    grid=major, % Display a grid  
+  %grid style={dashed,gray!90}, % Set the style
+  xlabel = \small{$ka$},
+  ylabel = \small{$l/a$},
+  ]
+ \addplot[color=black, thick] table[x index=0,y index=1] {dados/duto_exaustao/loa_007_analytical.txt};
+ \addplot[color=black, mark=o, only marks] table[x index=0,y index=1] {dados/duto_exaustao/loa_007_simulation.txt};
+   
+  \end{axis}
+  \end{tikzpicture}
+  %\caption[Coeficiente de Correção da Terminação $l/a$ com Escoamento de Exaustão (M $=$ 0,07)]{}
+  \label{fig:loa_exaustao_007}

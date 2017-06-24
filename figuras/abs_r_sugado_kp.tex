@@ -1,0 +1,33 @@
+\begin{tikzpicture}
+  \begin{axis}[
+  width=0.9\textwidth,
+  height=0.5\textwidth,
+  % x tick label style={
+  %     /pgf/number format/.cd,
+  %         fixed,
+  %         fixed zerofill,
+  %         precision=1,
+  %     /tikz/.cd
+  % },
+  xmin=0,
+  xmax=1.8,
+  ymin=0,
+  ymax=1.4,
+  ytick distance=0.2,
+  xtick distance=0.2,
+  grid=major, % Display a grid  
+  %grid style={dashed,gray!90}, % Set the style
+  xlabel = $ka$,
+  ylabel = $|R_{r}|$,
+  ]
+ \addplot[color=black, mark=o] table[x index=0,y index=1] {dados/duto_sugado/abs_049_kp.txt};
+ \addplot[color=black, mark=square] table[x index=0,y index=1] {dados/duto_sugado/abs_059_kp.txt};
+ \addplot[color=black, mark=triangle] table[x index=0,y index=1] {dados/duto_sugado/abs_071_kp.txt};
+\addplot[color=black, mark=x] table[x index=0,y index=1] {dados/duto_sugado/abs_074_kp.txt};
+\addplot[color=black, mark=diamond] table[x index=0,y index=1] {dados/duto_sugado/abs_075_kp.txt};
+
+  \end{axis}
+  \end{tikzpicture}
+  %\caption[Coeficiente de reflexão $|R_{r}|$ com escoamento sugado em relação ao número de Strouhal ($St$)]{Resultado de magnitudes do coeficiente de reflexão $|R_{r}|$ em relação ao número de Strouhal ($St$) calculados no ponto $\textbf{P}$ na terminação do duto com vários escoamentos sugados. Calculados pela ferramenta computacional proposta nesse estudo, os pontos com $\bigcirc$ apresentam os resultados para Mach $M =$ 0,05 e número de Reynolds $Re =$ 1378,73, os pontos com $\square$ apresentam os resultados para Mach $M =$ 0,07 e número de Reynolds $Re =$ 1930,23, os pontos com $\bigtriangleup$ apresentam os resultados para Mach $M =$ 0,1 e número de Reynolds $Re =$ 2757,42, os pontos com $\times$ apresentam os resultados para Mach $M =$ 0,15 e número de Reynolds $Re =$ 2057,71 e os pontos com $\diamond$ apresentam os resultados para Mach $M =$ 0,20 e número de Reynolds $Re =$ 5514,82.}
+
+  \label{fig:abs_r_sugado_kp}

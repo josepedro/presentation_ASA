@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+  \begin{axis}[
+   width=.9 \textwidth,
+  height=.7 \textwidth,
+  xmin=0,
+  xmax=1.8,
+  ymin=0.25,
+  ymax=0.65,
+  ytick distance=0.05,
+  grid=major, % Display a grid  
+  %grid style={dashed,gray!90}, % Set the style
+  xlabel = \small{$ka$},
+  ylabel = \small{$l/a$},
+  ]
+ \addplot[color=black, thick] table[x index=0,y index=1] {dados/outros_dados/loa_LS.txt};
+ \addplot[color=black, dashed] table[x index=0,y index=1] {dados/outros_dados/loa_munt.txt};
+   
+  \end{axis}
+  \end{tikzpicture}
+  \caption[Coeficientes de correção de terminação $l/a$]{Resultados analíticos exatos para o coeficiente de correção da terminação normalizado pelo raio $l/a$ de um duto não flangeado. A linha contínua apresenta o resultado sem escoamento de \citeonline{levine1948radiation} e a linha tracejada apresenta o resultado com escoamento de Mach = 0,15 de \citeonline{munt1990acoustic}.}
+  \label{fig:comp2}

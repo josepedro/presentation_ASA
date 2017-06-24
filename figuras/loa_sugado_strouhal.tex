@@ -1,0 +1,33 @@
+\begin{tikzpicture}
+  \begin{axis}[
+  width=0.9\textwidth,
+  height=0.5\textwidth,
+  % x tick label style={
+  %     /pgf/number format/.cd,
+  %         fixed,
+  %         fixed zerofill,
+  %         precision=1,
+  %     /tikz/.cd
+  % },
+  xmin=0,
+  xmax=7,
+  ymin=0,
+  ymax=1.4,
+  ytick distance=0.2,
+  xtick distance=1,
+  grid=major, % Display a grid  
+  %grid style={dashed,gray!90}, % Set the style
+  xlabel = $St$,
+  ylabel = $l/a$,
+  ]
+ \addplot[color=black, mark=o] table[x index=0,y index=1] {dados/duto_sugado/loa_005_strouhal.txt};
+ \addplot[color=black, mark=square] table[x index=0,y index=1] {dados/duto_sugado/loa_007_strouhal.txt};
+ \addplot[color=black, mark=triangle] table[x index=0,y index=1] {dados/duto_sugado/loa_010_strouhal.txt};
+\addplot[color=black, mark=x] table[x index=0,y index=1] {dados/duto_sugado/loa_015_strouhal.txt};
+\addplot[color=black, mark=diamond] table[x index=0,y index=1] {dados/duto_sugado/loa_020_strouhal.txt};
+
+  \end{axis}
+  \end{tikzpicture}
+  \caption[Coeficiente de correção da terminação $l/a$ com escoamento sugado em relação ao número de Strouhal ($St$)]{Resultados dos coeficientes de correção $l/a$ em relação ao número de Strouhal ($St$) calculados no ponto $\textbf{P}$ na terminação do duto com vários escoamentos sugados. Calculados pela ferramenta computacional proposta nesse estudo, os pontos com $\bigcirc$ apresentam os resultados para Mach $M =$ 0,05 e número de Reynolds $Re =$ 1378,73, os pontos com $\square$ apresentam os resultados para Mach $M =$ 0,07 e número de Reynolds $Re =$ 1930,23, os pontos com $\bigtriangleup$ apresentam os resultados para Mach $M =$ 0,1 e número de Reynolds $Re =$ 2757,42, os pontos com $\times$ apresentam os resultados para Mach $M =$ 0,15 e número de Reynolds $Re =$ 2057,71 e os pontos com $\diamond$ apresentam os resultados para Mach $M =$ 0,20 e número de Reynolds $Re =$ 5514,82.}
+
+  \label{fig:loa_sugado_strouhal}
